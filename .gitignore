@@ -361,3 +361,10 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/.idea/.idea.DemoAccessTokenWebApi/.idea/.gitignore
+/Data/Migrations/20240824080520_Initial.cs
+/Data/Migrations/20240824080520_Initial.Designer.cs
+/Data/Migrations/AuthDbContextModelSnapshot.cs
+/.idea/.idea.DemoAccessTokenWebApi/.idea/encodings.xml
+/.idea/.idea.DemoAccessTokenWebApi/.idea/indexLayout.xml
+/.idea/.idea.DemoAccessTokenWebApi/.idea/vcs.xml
