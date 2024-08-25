@@ -2,6 +2,7 @@ using System.Text;
 using DemoAccessTokenWebApi.Data;
 using DemoAccessTokenWebApi.DTOs;
 using DemoAccessTokenWebApi.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -56,5 +57,14 @@ namespace DemoAccessTokenWebApi.Controllers
             
             return Ok($"Access Token: {accessToken}");
         }
+
+
+        [HttpGet("protected-admin")]
+        [Authorize(AuthenticationSchemes = "Demo-Scheme", Roles = "Admin")]
+        public string AdminGetProtectedMessage() => "You are authorized [Admin]";
+        
+        [HttpGet("protected-user")]
+        [Authorize(AuthenticationSchemes = "Demo-Scheme", Roles = "User")]
+        public string UserGetProtectedMessage() => "You are authorized [User]";
     }
 }
